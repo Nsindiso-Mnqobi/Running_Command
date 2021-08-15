@@ -9,9 +9,9 @@ with open("Shodan_logs_"+Date+".txt", "w+") as file:
     
 host = 0
 
-for host in range(1,3,1):
+for host in range(1,255,1):
 
-    cmd = 'ping -c2 '  + ip + "."  + str(host) + " >> "+ "Shodan_logs_" + Date +".txt"
+    cmd = 'shodan '  + ip + "."  + str(host) + " >> "+ "Shodan_logs_" + Date +".txt"
     print("......................" + ip +"."+ str(host) + "....................")
     os.system(cmd)
     print("......................" + "Done"+ "....................")
